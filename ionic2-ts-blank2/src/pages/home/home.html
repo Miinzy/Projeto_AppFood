@@ -1,0 +1,30 @@
+﻿<ion-header>
+  <ion-navbar color="custom-color">
+    <ion-title>
+      Home
+    </ion-title>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div class="header-frase">
+    <a>Are U Hungry?</a>
+  </div>
+    <div class= "container">
+      <button ion-button round 
+              *ngIf="!toggled" 
+              (click)="toggleSearch()" 
+              name="search">
+        <ion-icon ios="ios-search" md="md-search">
+       </ion-icon></button>
+      <ion-searchbar *ngIf="toggled"
+                     [(ngModel)]="searchKeyword"
+                     [showCancelButton]="shouldShowCancel"
+                     (ionCanel)="toggleSearch()"
+                     (ionInput)="TriggerInput($event)">
+      </ion-searchbar>
+    </div>
+</ion-content>

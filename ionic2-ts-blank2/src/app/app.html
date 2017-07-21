@@ -1,0 +1,11 @@
+﻿<ion-menu [content]="menu">
+  <ion-content>
+    <ion-title class="title">Menu</ion-title>
+    <ion-list class="Lista">
+      <button ion-item menuClose><ion-icon ios="ios-home" md="md-home"></ion-icon> <b color="custom-color"> Home</b></button>
+      <button ion-item><ion-icon ios="ios-star" md="md-star"></ion-icon> <b color="custom-color"> Favoritos</b></button>
+      <button ion-item><ion-icon ios="ios-settings" md="md-settings"></ion-icon> <b color="custom-color"> Configurações</b></button>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+<ion-nav #menu [root]="rootPage"></ion-nav>
